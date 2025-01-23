@@ -65,17 +65,17 @@ button:hover {
 
 @media (max-width: 768px) {
     .register-container {
-        width: 90%; /* El formulario ocupará el 90% del ancho de la pantalla */
-        padding: 1.5rem; /* Reducir un poco el relleno */
+        width: 90%;
+        padding: 1.5rem;
     }
 
     h2 {
-        font-size: 1.3rem; /* Reducir el tamaño de la fuente */
+        font-size: 1.3rem;
     }
 
     .input-group input {
         padding: 0.7rem;
-        font-size: 1rem; /* Tamaño ajustado */
+        font-size: 1rem;
     }
 
     button {
