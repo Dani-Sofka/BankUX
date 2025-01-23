@@ -14,12 +14,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const password = passwordInput.value.trim();
         const errorMessage = document.querySelector('.error-message');
 
-        // Limpia mensajes de error previos
         if (errorMessage) {
             errorMessage.remove();
         }
 
-        // Validación de campos vacíos
         if (!firstname) {
             showError(registerForm, 'El campo de nombre no puede estar vacío.');
             hasError = true;
@@ -40,33 +38,29 @@ document.addEventListener('DOMContentLoaded', () => {
             hasError = true;
         }
 
-        // Validación de formato de correo
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (email && !emailRegex.test(email)) {
             showError(registerForm, 'Por favor, ingresa un correo válido.');
             hasError = true;
         }
 
-        // Validación de contraseña (mínimo 6 caracteres)
         if (password && password.length < 6) {
             showError(registerForm, 'La contraseña debe tener al menos 6 caracteres.');
             hasError = true;
         }
 
-        // Detén el envío si hay errores
         if (hasError) {
             e.preventDefault();
             return;
         }
 
-         // Mostrar el spinner y retrasar el envío
-         spinner.style.display = 'block'; // Mostrar el spinner
-         e.preventDefault(); // Detener temporalmente el envío
+         spinner.style.display = 'block'; 
+         e.preventDefault();
  
          setTimeout(() => {
-             spinner.style.display = 'none'; // Ocultar el spinner (opcional)
-             registerForm.submit(); // Enviar el formulario
-         }, 2000); // Cambiar a 2000 ms o el tiempo deseado
+             spinner.style.display = 'none';
+             registerForm.submit();
+         }, 2000);
     });
 
     function showError(form, message) {
