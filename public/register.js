@@ -56,7 +56,17 @@ document.addEventListener('DOMContentLoaded', () => {
         // Detén el envío si hay errores
         if (hasError) {
             e.preventDefault();
+            return;
         }
+
+         // Mostrar el spinner y retrasar el envío
+         spinner.style.display = 'block'; // Mostrar el spinner
+         e.preventDefault(); // Detener temporalmente el envío
+ 
+         setTimeout(() => {
+             spinner.style.display = 'none'; // Ocultar el spinner (opcional)
+             registerForm.submit(); // Enviar el formulario
+         }, 2000); // Cambiar a 2000 ms o el tiempo deseado
     });
 
     function showError(form, message) {
