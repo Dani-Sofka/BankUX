@@ -26,4 +26,22 @@ const login = async (req, res) => {
     }
 };
 
-module.exports = { login };
+const register = async (req, res) => {
+    const { firstname, lastname, email, password } = req.body;
+
+    if (!firstname || !lastname || !email || !password) {
+        return res.status(400).render('register/register', { error: 'Todos los campos son obligatorios' });
+    }
+
+    try {
+        // Llama a la función del modelo para registrar al usuario
+        const result = await registerUser(firstname, lastname, email, password);
+
+        // Redirige al login con un mensaje de éxito
+        res.render('login/login', { error: null, success: 'Usuario registrado exitosamente. Por favor, inicia sesión.' });
+    } catch (error) {
+        res.status(400).render('register/register', { error: error.message });
+    }
+};
+
+module.exports = { login, register };
