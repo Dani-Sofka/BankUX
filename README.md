@@ -31,7 +31,7 @@ Sigue estos pasos para configurar el proyecto en tu máquina local:
 
 1. Clona este repositorio:
    ```bash
-   git clone https://github.com/tu_usuario/tu_repositorio.git
+   https://github.com/Dani-Sofka/BankUX.git
    ```
 
 2. Ve al directorio del proyecto:
@@ -48,7 +48,7 @@ Sigue estos pasos para configurar el proyecto en tu máquina local:
 
 5. Inicia el servidor:
    ```bash
-   npm start
+   npm run dev
    ```
 
 ## Funcionalidades
