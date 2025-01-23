@@ -62,11 +62,19 @@ Sigue estos pasos para configurar el proyecto en tu máquina local:
 
 ### Ejemplo de Pantalla de Inicio de Sesión
 
-![Login Page](https://via.placeholder.com/800x400.png?text=Login+Page)
+![image](https://github.com/user-attachments/assets/d981d841-33ff-432d-8b51-140886408fcb)
+
+### Ejemplo de Pantalla de Registro de Usuario
+
+![image](https://github.com/user-attachments/assets/5c6e09ad-8ba3-4cf6-bc53-d067535e9792)
 
 ### Estructura de Carpetas
 
-![Folder Structure](https://via.placeholder.com/800x400.png?text=Folder+Structure)
+![image](https://github.com/user-attachments/assets/daaf1996-8ede-422a-9bf1-a2a07de59f84)
+
+### Endpoints consumidos desde Java
+
+![image](https://github.com/user-attachments/assets/74061d6d-7663-45c7-a513-3cb4a6f022cf)
 
 ## Dependencias Principales
 
