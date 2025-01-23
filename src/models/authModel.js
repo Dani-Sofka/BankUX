@@ -16,6 +16,7 @@ const loginUser = async (email, password) => {
 };
 
 const registerUser = async (firstname, lastname, email, password) => {
+    console.log("Enviando solicitud a la API con:", { firstname, lastname, email, password });
     try {
         const response = await axios.post(`${API_BASE_URL}/register`, {
             firstname,
@@ -23,9 +24,11 @@ const registerUser = async (firstname, lastname, email, password) => {
             email,
             password,
         });
+        console.log("Respuesta de la API:", response.data);
         // Devuelve los datos de la API
         return response.data;
     } catch (error) {
+        console.error("Error en la API de registro:", error.response?.data || error.message);
         throw new Error(error.response?.data?.message || 'Error al registrar el usuario');
     }
 };
