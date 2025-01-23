@@ -8,11 +8,6 @@
 <body>
   <div class="login-container">
     <h2>Iniciar sesión</h2>
-
-    <% if (error) { %>
-        <div class="error-message"><%= error %></div>
-      <% } %>
-    
     <form id="loginForm" action="/auth/login" method="POST">
       <div class="input-group">
         <label for="email">Correo:</label>
@@ -31,5 +26,7 @@
       <a href="/auth/register">¿No tienes cuenta? Regístrate aquí</a>
     </div>
   </div>
+  <div class="spinner" id="spinner"></div>
+  <script src="/login.js"></script>
 </body>
 </html>
