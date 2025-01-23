@@ -5,43 +5,39 @@ document.addEventListener('DOMContentLoaded', () => {
     const spinner = document.getElementById('spinner');
   
     loginForm.addEventListener('submit', (e) => {
-      e.preventDefault();
       let hasError = false;
       const email = emailInput.value.trim();
       const password = passwordInput.value.trim();
       const errorMessage = document.querySelector('.error-message');
   
-      // Limpia mensajes de error previos
       if (errorMessage) {
         errorMessage.remove();
       }
 
-  
-      // Validación de email
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Regex para validar el formato de email
       if (!emailRegex.test(email)) {
         showError(loginForm, 'Por favor ingresa un correo válido.');
         hasError = true;
       }
   
-      // Validación de contraseña
       if (password.length < 6) {
         showError(loginForm, 'La contraseña debe tener al menos 6 caracteres.');
         hasError = true;
       }
   
-      // Detén el envío si hay errores
       if (hasError) {
         e.preventDefault();
-      } else {
-        // Muestra el spinner
-        spinner.style.display = 'block';
+        return;
+      } 
 
-        // Retrasar el envío del formulario 2000ms
+        spinner.style.display = 'block';
+        e.preventDefault();
+
         setTimeout(() => {
-          loginForm.submit(); // Envía el formulario después de 2 segundos
-      }, 1000);
-    }
+          spinner.style.display = 'none';
+          loginForm.submit();
+      }, 2000);
+    
     });
   
     function showError(form, message) {
