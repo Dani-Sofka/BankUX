@@ -1,10 +1,15 @@
 const { loginUser } = require('../models/authModel');
 
 const login = async (req, res) => {
-    const { username, password } = req.body;
+    const { email, password } = req.body;
+
+    if (!email || !password) {
+        return res.status(400).render('login/login', { error: 'El correo y la contraseña son obligatorios' });
+    }
 
     try {
-        const userData = await loginUser(username, password);
+        const userData = await loginUser(email, password);
+
 
         // Suponiendo que la API devuelve un token y el nombre del usuario
         const { token, name} = userData;
@@ -16,6 +21,7 @@ const login = async (req, res) => {
         res.render('dashboard/dashboard', { name });
 
     } catch (error) {
+        console.error("Error en login:", error.response?.data || error.message);
         res.status(401).render('login/login', { error: error.message });
     }
 };
