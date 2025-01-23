@@ -8,7 +8,7 @@ const loginUser = async (email, password) => {
             email,
             password
         });
-        // Devuelve la respuesta de la API
+        
         return response.data;
     } catch (error) {
         throw new Error(error.response?.data?.message || 'Error en la autenticación');
@@ -25,7 +25,7 @@ const registerUser = async (firstname, lastname, email, password) => {
             password,
         });
         console.log("Respuesta de la API:", response.data);
-        // Devuelve los datos de la API
+        
         return response.data;
     } catch (error) {
         console.error("Error en la API de registro:", error.response?.data || error.message);
