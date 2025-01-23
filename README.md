@@ -76,11 +76,14 @@ Sigue estos pasos para configurar el proyecto en tu máquina local:
 
 ![image](https://github.com/user-attachments/assets/74061d6d-7663-45c7-a513-3cb4a6f022cf)
 
-## Dependencias Principales
+### Dependencias principales:
+![Axios](https://img.shields.io/badge/Axios-5A29E4?style=for-the-badge&logoColor=white)
+![Dotenv](https://img.shields.io/badge/Dotenv-ECD53F?style=for-the-badge&logoColor=black)
+![EJS](https://img.shields.io/badge/EJS-82B6E9?style=for-the-badge&logoColor=black)
+![Express](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
 
-- [Express](https://expressjs.com/): Framework para Node.js.
-- [Axios](https://axios-http.com/): Cliente HTTP para solicitudes al backend Java.
-- [dotenv](https://www.npmjs.com/package/dotenv): Gestión de variables de entorno.
+### Dependencias de desarrollo:
+![Nodemon](https://img.shields.io/badge/Nodemon-76D04B?style=for-the-badge&logoColor=white)
 
 ## Contribución
 
